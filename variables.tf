@@ -1,3 +1,16 @@
+locals {
+  naming_suffix = "${var.pipeline_name}-${var.naming_suffix}"
+  path_module   = "${var.path_module != "unset" ? var.path_module : path.module}"
+}
+
+variable "path_module" {
+  default = "unset"
+}
+
+variable "naming_suffix" {
+  default = "apps-test-dq"
+}
+
 variable "data_feeds_cidr_block" {
   default = "10.1.4.0/24"
 }
