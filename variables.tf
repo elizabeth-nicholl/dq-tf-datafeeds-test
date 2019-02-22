@@ -9,26 +9,33 @@ variable "naming_suffix" {
 variable "data_feeds_cidr_block" {
   default = "10.1.4.0/24"
 }
+
 variable "peering_cidr_block" {
   default = "10.3.0.0/16"
 }
+
 variable "appsvpc_id" {
-  default = "10.1.0.0/16"
+  default = "vpc-05554dda98b880e72"
 }
+
 variable "opssubnet_cidr_block" {
   default = "10.8.0.0/16"
 }
+
 variable "data_pipe_apps_cidr_block" {
   default = "10.1.8.0/24"
 }
+
 variable "data_feeds_cidr_block_az2" {
   default = "10.1.5.0/24"
 }
+
 variable "az" {
-  default = "a"
+  default = "eu-west-2a"
 }
+
 variable "az2" {
-  default = "b"
+  default = "eu-west-2b"
 }
 
 variable "datafeed_rds_db_name" {
