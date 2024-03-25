@@ -37,9 +37,9 @@ resource "aws_ssm_parameter" "rds_datafeed_password" {
 resource "aws_db_instance" "datafeed_rds" {
   identifier              = "postgres-${local.naming_suffix}"
   allocated_storage       = 100
-  storage_type            = "gp2"
+  storage_type            = "gp3"
   engine                  = "postgres"
-  engine_version          = "10.4"
+  engine_version          = "12.18"
   instance_class          = "db.m4.large"
   username                = "${random_string.datafeed_username.result}"
   password                = "${random_string.datafeed_password.result}"
